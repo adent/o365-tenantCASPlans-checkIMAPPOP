@@ -31,7 +31,7 @@ foreach($customer in $customers) {
         $domainCapabilities = Out-String -InputObject $domain.Capabilities        
         if ($domainCapabilities.Contains("Email")){ 
             try {           
-                $output = Connect-ExchangeOnline -UserPrincipalName andrew@dentaur.com -DelegatedOrganization $domain.Name -ShowBanner:$false -ShowProgress:$false -EnableErrorReporting:$false
+                $output = Connect-ExchangeOnline -UserPrincipalName partneremail@example.com -DelegatedOrganization $domain.Name -ShowBanner:$false -ShowProgress:$false -EnableErrorReporting:$false
             }
             catch {
                 $host.ui.RawUI.ForegroundColor = "White"                
